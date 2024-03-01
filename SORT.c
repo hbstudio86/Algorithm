@@ -9,9 +9,16 @@
 //Program Ver. 
 static char* _VER = "1.0.0";
 
+//SYS. Function
+int menu(void);
+
+//Sort Function Heat
+
 int main(void) {
 
 	time_t t = time(NULL);
+
+	int _sel_num;
 
 	//메뉴를 통해 각 정렬 알고리즘에 대해 결과값을 보여 주도록 한다.
 	// 우선 n^2의 효율인 선택, 버블, 셸, 삽입 정렬
@@ -22,9 +29,11 @@ int main(void) {
 
 	//메뉴 위치
 		//메뉴의 정렬 별로 글자 색상을 다르게 처리 하도록 한다?
-	printf("SORT Algorithm Practice Program (Ver.: %s )\n",_VER);
-	printf("===== Select SORT Algorithm =====\n");
-	printf("1. Select SORT\n2. Bubble SORT\n3. Shell SORT\n4. Insert SORT\n99. All Processing\n0. EXIT PROGRAM\n");
+	do {
+		printf("SORT Algorithm Practice Program (Ver.: %s )\n",_VER);
+		printf("===== Select SORT Algorithm =====\n");
+		printf("1. Select SORT\n2. Bubble SORT\n3. Shell SORT\n4. Insert SORT\n99. All Processing\n0. EXIT PROGRAM\n");
+	} while (_sel_num != 0);	//프로그램 종료되기 전까지 Loop를 돌리며 시작 한다.
 
 
 	struct tm *tm1 = localtime(&t);
@@ -33,3 +42,10 @@ int main(void) {
 
 	return 0;
 }
+
+// Sort Function Codes
+
+int menu(void) {
+
+}
+
